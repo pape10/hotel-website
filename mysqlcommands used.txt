@@ -1,0 +1,3 @@
+for adding menu
+create TABLE menu
+(orderID int(9) NOT NULL auto_increment, itemname varchar(40) NOT NULL,price INT(20) NOT NULL,description varchar(1000) NOT NULL,imagespath1 varchar(1000) NOT NULL, imagespath2 varchar(1000) NOT NULL,imagespath3 varchar(1000) NOT NULL,PRIMARY KEY(orderID));

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sign-In</title>
+<link rel="stylesheet" type="text/css" href="style-sign.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="food_menu.css" rel="stylesheet" type="text/css" />
+<link href="modal.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body-color">
+<div class="w3-top">
+<ul id="navigation">
+  <li><a class="active" href="index.php"><img src="logo.gif" id="logo"></a></li>
+  <li id="tabs"><a href="#news" >about</a></li>
+  <li class="dropdown" >
+    <a href="#" class="dropbtn">services</a>
+    <div class="dropdown-content">
+      <a href="show_menu_home.php">home delivery</a>
+      <a href="#">book a table</a>
+      <a href="#">party order</a>
+    </div>
+  </li>
+  <li id="tabs"><a href="searchmenu.php" >menu</a></li>
+  <?php
+  if(empty($_SESSION['userName']))
+  {
+  echo '<li id="login_register"><a href="register.html">register</a></li>
+  <li id="login_register"><a href="#openModal">log in</a></li>';
+  }
+  else
+  {
+    echo '  <li class="dropdown" style="float:right" >
+    <a href="#" class="dropbtn">account</a>
+    <div class="dropdown-content" style="right:160px">
+      <a href="tray.php" style="text-align:right">tray</a>
+      <a href="account.php" style="text-align:right">account info</a>
+      <a href="logout.php" style="text-align:right">logout</a>
+    </div>
+  </li>';
+  }
+?>
+</ul>
+    
+<div id="Sign-In">
+<fieldset style="width:30%"><legend>LOG-IN HERE</legend>
+<form method="POST" action="connectivity.php">
+User <br><input type="text" name="user" size="40"><br>
+Password <br><input type="password" name="pass" size="40"><br>
+<input id="button" type="submit" name="submit" value="Log-In">
+</form>
+</fieldset>
+</div>
+</body>
+</html> 
+
+

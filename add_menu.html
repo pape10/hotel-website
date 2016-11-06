@@ -1,0 +1,20 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<link href="add_menu.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	<form action="saveimage.php" enctype="multipart/form-data" method="POST">
+	itemname:<input type="text" name="itemname">
+	price:<input type="text" name="price">
+	desc:<input type="text" name="description">
+	<LABEL>primary image:</LABEL><input name="primaryimage" type="file">
+	<br/>
+	<LABEL>second image:</LABEL><input name="secondaryimage" type="file">
+	<br/>
+	<LABEL>third image:</LABEL><input name="thirdimage" type="file">
+	<br/>
+	<input name="Upload Now" type="submit" id="button" value="Upload Image">
+	</form>
+	</body>
+	</html>

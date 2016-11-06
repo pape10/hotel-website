@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Autocomplete textbox using jQuery, PHP and MySQL by CodexWorld</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#search" ).autocomplete({
+      source: 'search.php'
+    });
+  });
+  </script>
+</head>
+<body>
+ 
+<div class="ui-widget" style="margin-left:720px;margin-top:10px;margin-bottom:10px;">
+<form action="searchmenu.php" method="GET">
+  <input type="text" placeholder="search the menu" id="search" name="searchquery" style="width:500px;height:40px">
+  <input type="submit" name="search" value="search">
+  </form>
+</div>
+</body>
+</html>
